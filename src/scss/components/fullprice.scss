@@ -1,0 +1,28 @@
+.basket__fullprice {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    background-color: $whiteColor;
+
+    .fullprice__content {
+        display: flex;
+        padding: 21px 16px 0 21px;
+        margin-bottom: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .fullprice__button {
+        padding: 22px 13px;
+        border-radius: 30px;
+        background-color: $logoColor;
+        transition: color .3s ease-in-out, background-color .3s ease-in-out, outline .3s ease-in-out;
+        @include _font(500, 17px, 21px, $whiteColor);
+
+        &:hover {
+            background-color: $whiteColor;
+            color: $blackColor;
+            outline: 1px solid $blackColor;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.basket {
+    .basket__content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding-bottom: 30px;
+    }
+}
+  

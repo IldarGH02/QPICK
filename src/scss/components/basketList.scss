@@ -1,0 +1,89 @@
+.basket__left-side {
+    width: calc(60% - 64px);
+
+        .basket__list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        
+            .basket__item {
+                .basket__article {
+                    .basket__card {                        
+                        position: relative;
+                        padding: 18px 28px;
+                        border-radius: 30px;
+                        background-color: $whiteColor;
+
+                        .basket__card-top {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+
+                            .basket__image {
+                                img {
+                                    width: 146px;
+                                    height: 136px;
+                                }
+                            }
+
+                            .basket__description {
+                                .basket__name {
+                                    margin-bottom: 25px;
+                                    @include _font(600, 17px, 21px, $textColor);
+                                }
+
+                                .basket__price {
+                                    @include _font(600, 17px, 21px, $titlePage);
+                                }
+                            }
+                        }
+
+                        .basket__card-bottom {
+                            display: flex;
+                            flex-flow: row wrap;
+                            justify-content: space-between;
+
+                            .basket__counter {
+                                max-width: fit-content;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                gap: 24px;
+                                @include _font(600, 17px, 21px, $blackColor);
+
+                                .basket__counter-button {                                    
+                                    svg {
+                                        height: 30px;
+                                        width: 35px;
+                                        background-color: $whiteColor;
+                                        color: $buttonBasket;
+                                    }
+                                }
+                            }
+
+                            .basket__price {
+                                @include _font(600, 17px, 18px, $textColor);
+                            }
+                        }
+
+                        .basket__button {
+                            position: absolute;
+                            top: 18px;
+                            right: 30px;
+
+                            svg {
+                                height: 30px;
+                                width: 30px;
+                                color: $deleteColor;
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}
+
+.basket__right-side {
+    width: calc(40% - 64px);
+}
+

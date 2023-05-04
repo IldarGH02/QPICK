@@ -1,0 +1,63 @@
+.header {
+    .header__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+
+        .logo {
+            @include _font(700, 25px, 30px, $logoColor)
+        }
+
+        .header__items {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .header__item {
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }
+
+            .header__basket {                
+                position: relative;
+
+                .basket__button {
+                    margin-right: 0 !important;
+                }
+    
+                .header__count {
+                    
+                    span {
+                        position: absolute;
+                        top: -5px;
+                        right: -10px;
+                        width: 16px;
+                        height: 18px;
+                        border-radius: 100%;
+                        text-align: center;
+                        background-color: $activeText;
+                        @include _font(500, 15px, 18px, $whiteColor)
+                    }
+                }
+            }
+
+            .header__link {
+                text-decoration: none;
+                transition: color .3s ease-in-out;
+
+                &:hover {
+                    color: $hoverText;
+                }
+
+                @include _font(400, 20px, 35px, $textColor);        
+            }
+
+            .active {
+                color: $activeText;
+            }
+        }
+    }
+}

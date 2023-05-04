@@ -1,0 +1,94 @@
+.products__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 30px;    
+
+    .product__item {
+        width: 350px;
+        height: 406px;
+
+        .product__article {
+            height: 100%;
+
+            .product__card {
+                display: flex;
+                height: 100%;
+                padding: 15px 20px 30px 20px;
+                border-radius: 30px;
+                background-color: $whiteColor;
+
+                .product__content {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .product__image {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .product__description {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        .product__name {
+                            margin-bottom: 25px;
+                            @include _font(600, 17px, 21px, $textColor);
+                        }
+
+                        .product__grade {
+                            display: flex;
+                            align-items: center;
+                            @include _font(600, 17px, 21px, $titlePage);
+
+                            svg {
+                                margin-right: 10px;
+                                color: $activeText;
+                            }
+                        }
+
+                        .product__price {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 25px;
+                            @include _font(600, 17px, 21px, $activeText);
+
+                            svg {
+                                margin-left: 5px;
+                                height: 15px;
+                                width: 10px;                                
+                            }
+                        }
+
+                        .product__button {
+                            transition: color .3s ease-in-out, transform .3s ease-in-out;
+                            @include _font(600, 17px, 21px, $blackColor);
+                            
+                            &:focus-within {
+                                transform: scale(1.1);
+                                color: $activeText;
+                            }
+
+                            &:hover {
+                                transform: scale(1.1);
+                                color: $activeText;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wired__list {
+    margin-bottom: 30px;
+}
+
+.wireless__list {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,4 @@
+.titlePage {
+    margin-bottom: 20px;
+    @include _font(600, 20px, 24px, $titlePage);
+}
