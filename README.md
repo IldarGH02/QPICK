@@ -12,5 +12,7 @@
 2. Redux, Redux Toolkit
 3. SASS/SCSS
 4. React-router-dom
+5. React-icons
+6. React-transition-group
 
 
