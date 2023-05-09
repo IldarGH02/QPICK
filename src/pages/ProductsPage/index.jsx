@@ -17,6 +17,7 @@ const ProductsPage = () => {
         dispatch(setWireless())
     }, [])
 
+
     return (
         <section className="products">
             <div className="container">

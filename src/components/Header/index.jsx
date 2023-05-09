@@ -1,6 +1,6 @@
 import Basket from "components/Basket"
-import Likes from "components/Likes"
-import Logo from "components/Logo"
+import Likes from "ui/Likes"
+import Logo from "ui/Logo"
 import { NavLink } from "react-router-dom"
 import { routeMain as routeProductsPage} from "pages/ProductsPage"
 

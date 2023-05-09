@@ -1,4 +1,6 @@
-import Logo from "components/Logo"
+import Logo from 'ui/Logo'
+import Button from 'ui/Button'
+
 import { GrLanguage } from 'react-icons/gr' 
 import { SlSocialVkontakte } from 'react-icons/sl'
 import { FaTelegram } from 'react-icons/fa'
@@ -6,13 +8,10 @@ import { BsWhatsapp } from 'react-icons/bs'
 
 import { Link, NavLink } from "react-router-dom"
 import { routeMain as routeBasketPage } from "pages/BasketPage"
+import { routeMain as routeContactsPage } from 'pages/ContactsPage'
 import { routeMain as routeNotFound } from "pages/NotFoundPage"
 
-import Button from "components/Button"
-
-const Footer = () => {
-
-  
+const Footer = () => { 
 
     const handleClick = (e) => {
         const target = e.target
@@ -39,7 +38,7 @@ const Footer = () => {
                         <NavLink className="footer__item item__link" to={routeBasketPage()}>
                             Корзина
                         </NavLink>
-                        <NavLink className="footer__item item__link" to={routeNotFound()}>
+                        <NavLink className="footer__item item__link" to={routeContactsPage()}>
                             Контакты
                         </NavLink>
                     </ul>

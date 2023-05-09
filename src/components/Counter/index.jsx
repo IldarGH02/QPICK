@@ -1,4 +1,4 @@
-import Button from "components/Button"
+import Button from 'ui/Button'
 import { AiFillPlusCircle } from 'react-icons/ai'
 import { AiFillMinusCircle } from 'react-icons/ai'
 

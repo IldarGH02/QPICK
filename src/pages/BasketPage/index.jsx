@@ -1,4 +1,4 @@
-import { useState} from "react"
+import { useState } from "react"
 import { useSelector } from "react-redux"
 import {CSSTransition} from 'react-transition-group'
 import { routeMain } from "./routes"
@@ -8,11 +8,11 @@ import TitlePage from "components/TitlePage"
 import FullPrice from "components/FullPrice"
 import Modal from "components/Modal"
 
-
 const BasketPage = () => {
-    const [show, setShow] = useState(false)
     const basket = useSelector(state => state.basket.basket)
-    
+    const [show, setShow] = useState(false)
+
+   
     const handleClick = () => setShow(true)
     const handleClose = () => setShow(false)
 
@@ -30,7 +30,7 @@ const BasketPage = () => {
                 />
                 <div className="basket__content">
                     <div className="basket__left-side">
-                        {basket ? <BasketList className='basket__list' list={basket}/> : <></>}
+                        <BasketList className='basket__list' list={basket}/>
                     </div>
                     <div className="basket__right-side">
                         <FullPrice

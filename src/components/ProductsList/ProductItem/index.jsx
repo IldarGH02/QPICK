@@ -1,9 +1,9 @@
-import Button from "components/Button"
+import Button from "ui/Button"
 import { useEffect, useState } from "react"
 import { FaRubleSign } from 'react-icons/fa'
 import { MdGrade } from 'react-icons/md'
 import { useDispatch, useSelector } from "react-redux"
-import { addProduct, deleteProduct, removeBasketPrice } from "store/slices/basketSlice"
+import { addProduct } from "store/slices/basketSlice"
 
 const ProductItem = ({item}) => {
     const [product, setProduct] = useState(false)
@@ -16,22 +16,15 @@ const ProductItem = ({item}) => {
                 setProduct(true)
             }
         });
-    }, [])
+    }, [basket, item.id])
 
     const actions = () => {
-        setProduct(!product);
-        if(product) {
-            basket.forEach(elem => {
-                if(elem.id === item.id) {
-                    dispatch(removeBasketPrice(item.price * (elem.count - 1)))
-                }
-            })
-            dispatch(deleteProduct(item.id))
-        } else {
+        if(!product) {
             dispatch(addProduct({
                 ...item,
                 count: 1
             }))
+            setProduct(true)
         }
     }
 

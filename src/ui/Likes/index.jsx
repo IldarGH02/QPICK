@@ -1,5 +1,5 @@
 import { likes } from "assets/header/likes"
-import Button from "components/Button"
+import Button from "ui/Button"
 
 const Likes = () => {
     return (

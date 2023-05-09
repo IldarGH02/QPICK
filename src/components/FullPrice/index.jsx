@@ -1,6 +1,8 @@
+import Button from "ui/Button"
+
 import { useSelector } from "react-redux"
 import { FaRubleSign } from 'react-icons/fa'
-import Button from "components/Button"
+
 
 const FullPrice = (props) => {
     const fullPrice = useSelector(state => state.basket.basketPrice)

@@ -1,0 +1,24 @@
+.contacts {
+    .contacts__content {
+        .contacts__items {
+            display: flex;
+            flex-direction: column;
+
+            .contacts__item {
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+
+                .contacts__link {
+                    text-decoration: none;
+                    transition: color .3s ease-in-out;
+
+                    &:hover {
+                        color: $hoverText
+                    }
+                    @include _font(400, 17px, 21px, $textColor);
+                }
+            }
+        }
+    }
+}

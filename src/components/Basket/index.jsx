@@ -1,5 +1,5 @@
+import Button from "ui/Button"
 import { basket } from "assets/header/basket.js"
-import Button from "components/Button"
 import { useNavigate } from "react-router-dom"
 import { routeMain as routeBasketPage } from "pages/BasketPage"
 import { useSelector } from "react-redux"

@@ -1,0 +1,25 @@
+.home {
+    padding: 100px 0;
+
+    .home__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .titlePage {
+            @include _font(700, 25px, 31px, $blackColor)
+        }
+
+        .home__link {
+            text-decoration: none;
+            transition: color .3s ease-in-out;
+
+            &:hover {
+                color: $hoverText;
+            }
+
+            @include _font(400, 20px, 25px, $textColor);
+        }
+    }
+}

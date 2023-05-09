@@ -1,4 +1,4 @@
-import Button from "components/Button"
+import Button from "ui/Button"
 import Counter from "components/Counter"
 import { useEffect, useMemo, useState } from "react"
 import { FaRubleSign } from 'react-icons/fa'
